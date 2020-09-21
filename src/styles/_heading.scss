@@ -1,0 +1,61 @@
+@import 'movie';
+
+.landing-page{
+    background-image: url('../img/home-bg.svg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.header-container {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    svg {
+        width: 200px;
+    }
+    ul {
+        display: flex;
+        align-items: flex-end;
+        list-style: none;
+        font-family: $header-font;
+        font-size: 1.7rem;
+        a {
+            text-decoration: none;
+            color: rgb(54, 54, 54);
+            li {
+                margin-left: 2em;
+            }
+        }
+    }
+}
+
+
+.welcome-section{
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .title-search {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 500px;
+        height: auto;
+        h2 {
+            font-size: 4vw;
+            font-family: $header-font;
+            text-align: left;
+            margin: 0;
+            font-weight: lighter;
+            
+        }
+    }
+    svg{
+        width: 25%;
+        height: auto;
+        margin-right: 10%;
+    }
+}

@@ -1,0 +1,19 @@
+@import 'heading';
+
+.result-heading {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-family: $header-font;
+    font-weight: lighter;
+    font-size: 4vw;
+}
+
+
+.result-container {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-gap: 4em;
+    justify-content: center;
+}

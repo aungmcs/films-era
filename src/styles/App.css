@@ -1,0 +1,444 @@
+.movie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25em;
+  height: 18em;
+  border-radius: 1.4em;
+  background-color: white;
+  border: 1px solid gray;
+  margin-bottom: 2em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.movie-card:hover {
+  -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 45%;
+  height: auto;
+  margin-right: 2em;
+  border-top-left-radius: 1.4em;
+  border-bottom-left-radius: 1.4em;
+}
+
+.movie-card .movie-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-right: 1.5em;
+}
+
+.movie-card .movie-detail h2 {
+  width: 100%;
+  margin: 0.3em 0 0 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+}
+
+.movie-card .movie-detail p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.movie-card .movie-detail button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+  padding: 0.5em;
+  border-radius: 0.7em;
+  border: 1px solid gray;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.movie-card .movie-detail button:hover {
+  background-color: #ffe39b;
+}
+
+.movie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25em;
+  height: 18em;
+  border-radius: 1.4em;
+  background-color: white;
+  border: 1px solid gray;
+  margin-bottom: 2em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.movie-card:hover {
+  -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 45%;
+  height: auto;
+  margin-right: 2em;
+  border-top-left-radius: 1.4em;
+  border-bottom-left-radius: 1.4em;
+}
+
+.movie-card .movie-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-right: 1.5em;
+}
+
+.movie-card .movie-detail h2 {
+  width: 100%;
+  margin: 0.3em 0 0 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+}
+
+.movie-card .movie-detail p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.movie-card .movie-detail button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+  padding: 0.5em;
+  border-radius: 0.7em;
+  border: 1px solid gray;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.movie-card .movie-detail button:hover {
+  background-color: #ffe39b;
+}
+
+.landing-page {
+  background-image: url("../img/home-bg.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-container svg {
+  width: 200px;
+}
+
+.header-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.7rem;
+}
+
+.header-container ul a {
+  text-decoration: none;
+  color: #363636;
+}
+
+.header-container ul a li {
+  margin-left: 2em;
+}
+
+.welcome-section {
+  margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.welcome-section .title-search {
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+  height: auto;
+}
+
+.welcome-section .title-search h2 {
+  font-size: 4vw;
+  font-family: "Bebas Neue", cursive;
+  text-align: left;
+  margin: 0;
+  font-weight: lighter;
+}
+
+.welcome-section svg {
+  width: 25%;
+  height: auto;
+  margin-right: 10%;
+}
+
+.search-box {
+  margin-top: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box input {
+  font-size: 1.5vw;
+  padding: 0.7em 1em 0.7em 1em;
+  margin-right: 1.3em;
+  border-radius: 1.5em;
+  border: 1px solid gray;
+  outline: none;
+  text-align: left;
+}
+
+.search-box .search-btn {
+  cursor: pointer;
+}
+
+.movie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25em;
+  height: 18em;
+  border-radius: 1.4em;
+  background-color: white;
+  border: 1px solid gray;
+  margin-bottom: 2em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.movie-card:hover {
+  -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 45%;
+  height: auto;
+  margin-right: 2em;
+  border-top-left-radius: 1.4em;
+  border-bottom-left-radius: 1.4em;
+}
+
+.movie-card .movie-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-right: 1.5em;
+}
+
+.movie-card .movie-detail h2 {
+  width: 100%;
+  margin: 0.3em 0 0 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+}
+
+.movie-card .movie-detail p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.movie-card .movie-detail button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+  padding: 0.5em;
+  border-radius: 0.7em;
+  border: 1px solid gray;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.movie-card .movie-detail button:hover {
+  background-color: #ffe39b;
+}
+
+.landing-page {
+  background-image: url("../img/home-bg.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-container svg {
+  width: 200px;
+}
+
+.header-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.7rem;
+}
+
+.header-container ul a {
+  text-decoration: none;
+  color: #363636;
+}
+
+.header-container ul a li {
+  margin-left: 2em;
+}
+
+.welcome-section {
+  margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.welcome-section .title-search {
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+  height: auto;
+}
+
+.welcome-section .title-search h2 {
+  font-size: 4vw;
+  font-family: "Bebas Neue", cursive;
+  text-align: left;
+  margin: 0;
+  font-weight: lighter;
+}
+
+.welcome-section svg {
+  width: 25%;
+  height: auto;
+  margin-right: 10%;
+}
+
+.result-heading {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-family: "Bebas Neue", cursive;
+  font-weight: lighter;
+  font-size: 4vw;
+}
+
+.result-container {
+  width: 95%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* {
+  text-align: center;
+  text-decoration: none;
+  color: #2c2c2c;
+}
+/*# sourceMappingURL=App.css.map */
