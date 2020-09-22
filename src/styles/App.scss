@@ -2,8 +2,32 @@
 @import "heading";
 @import "search";
 @import "result";
-* {
+
+*, 
+::after,
+::before{
     text-align: center;
     text-decoration: none;
-    color: rgb(44, 44, 44);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(182, 182, 182);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(182, 182, 182);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(182, 182, 182);
+  }
+
+a {
+    text-decoration: none;
 }

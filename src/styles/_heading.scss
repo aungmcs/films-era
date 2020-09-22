@@ -5,6 +5,10 @@
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
+    @media screen and (max-width: $md){
+        background-image: url('../img/home-bg-sm.svg');
+    }
+
 }
 .header-container {
     width: 95%;
@@ -12,8 +16,15 @@
     margin-top: 0.5em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     svg {
-        width: 200px;
+        width: 12vw;
+        @media screen and (max-width: $md){
+            width: 160px;
+        }
+        @media screen and (max-width: $xm){
+            width: 80px;
+        }
     }
     ul {
         display: flex;
@@ -28,6 +39,12 @@
                 margin-left: 2em;
             }
         }
+        @media screen and (max-width: $md){
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: $xm){
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -37,25 +54,52 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media screen and (max-width: $md){
+        flex-direction: column;
+        align-items: center;
+    }
+
     .title-search {
         margin-left: 10%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 500px;
+        width: 100%;
         height: auto;
+        @media screen and (max-width: $md){
+            margin: 0;
+            align-items: center;
+        }
         h2 {
             font-size: 4vw;
             font-family: $header-font;
             text-align: left;
             margin: 0;
             font-weight: lighter;
+            @media screen and (max-width: $md){
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            @media screen and (max-width: $xm){
+                font-size: 2rem;
+                margin: 0;
+                width: 300px;
+            }
             
         }
     }
     svg{
-        width: 25%;
+        width: 45%;
         height: auto;
         margin-right: 10%;
+        @media screen and (max-width: $md){
+            width: 300px;
+            margin: 0;
+            margin-top: 3em;
+            width: 50%;
+        }
+        @media screen and (max-width: $xm){
+            width: 210px;
+        }
     }
 }

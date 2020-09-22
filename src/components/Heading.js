@@ -10,7 +10,7 @@ const Header = ({search}) => {
                     <text id="FilmsEra" transform="translate(0 52)" fill="#3e3e3e" fontSize="54" fontFamily="Arvo"><tspan x="0" y="0">Films</tspan><tspan y="0" fill="#f8c163" fontFamily="Arvo-Bold, Arvo" fontWeight="700">Era</tspan></text>
                 </svg>
                 <ul>
-                    <a href="#"><li>Watch List</li></a>
+                    <a href="#watchlist"><li>Watch List</li></a>
                     <a href="#result"><li>Movies</li></a>
                 </ul>
             </nav>

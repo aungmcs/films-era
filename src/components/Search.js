@@ -24,12 +24,14 @@ const Search = (props) => {
     return(
         <div className='search-box'>
             <input 
+                className='search-area'
                 onChange={handleWordChange} 
                 value={searchWord} 
                 type="text" 
                 placeholder="Enter a single keyword..."
             />
-            <input className='search-btn' onClick={handleClick} type="submit" value="Search"/>
+            {/* <input className='search-btn' onClick={handleClick} type="submit" value={<i class="fas fa-search"></i>}/> */}
+            <button className='search-btn' onClick={handleClick}><i className="fas fa-search ic"></i></button>
         </div>
     )
 }

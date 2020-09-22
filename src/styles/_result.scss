@@ -1,19 +1,77 @@
-@import 'heading';
-
 .result-heading {
-    margin-top: 2em;
+    margin-top: 2.6em;
     margin-bottom: 1em;
     font-family: $header-font;
     font-weight: lighter;
     font-size: 4vw;
+    @media screen and (max-width: $md){
+        font-size: 3.2rem;
+    }
+    @media screen and (max-width: $xm){
+        font-size: 1.9rem;
+    }
 }
 
 
 .result-container {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    // margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);
     grid-gap: 4em;
     justify-content: center;
+    @media screen and (max-width: $md){
+        grid-template-columns: 500px;
+    }
+    @media screen and (max-width: $sm){
+        grid-gap: 0.1em;
+        width: 100%;
+        grid-template-columns: 450px;
+        grid-template-rows: repeat(auto-fill, 300px);
+    }
+    @media screen and (max-width: $xm){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.no-watchlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg {
+        width: 30%;
+        height: auto;
+        @media screen and (max-width: $md){
+            width: 200px;
+        }
+    }
+    p{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2vw;
+        color: gray;
+        @media screen and (max-width: $md){
+            font-size:2.4rem;
+        }
+        @media screen and (max-width: $xm){
+            font-size: 1rem;
+        }
+    }
+}
+
+.error {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(161, 161, 161);
+    font-family: 'Quicksand', sans-serif;
+    svg {
+        width: 200px;
+        height: auto;
+    }
+    @media screen and (max-width: $xm){
+        font-size: 0.8rem;
+    }
 }
