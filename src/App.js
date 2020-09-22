@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     setLoadingState(true)
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=jungle`) // Object.Search[0].Title/Year/imdbID/Type/Poster
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=jungle`) // Object.Search[0].Title/Year/imdbID/Type/Poster
     .then(response => response.json())
     .then(response => {
       let temp = []
@@ -45,7 +45,7 @@ function App() {
 // -------------- SEARCH CALLBACK ----------------------------
 
   const searchWord = (keyWord) => {
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${keyWord}`) // Object.Search[0].Title/Year/imdbID/Type/Poster
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${keyWord}`) // Object.Search[0].Title/Year/imdbID/Type/Poster
     .then(response => response.json())
     .then(response => {
       if (response.Response === 'False'){
