@@ -7,7 +7,7 @@ const MovieWatchList = (props) => {
     }
     return (
         // <a className='movie-link' href={`https://www.imdb.com/title/${props.movie.imdbID}/`} target='_blank' rel="noopener noreferrer">
-            <div className='movie-card' data-aos='fade-up'>
+            <div className='movie-card'>
                 <img src={props.movie.Poster} alt={props.Title}/>
                 <div className='movie-detail' >
                     <h2>{props.movie.Title}</h2>
