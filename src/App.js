@@ -100,7 +100,7 @@ function App() {
                                                     watchList={addWatchList} />)
 
 // adding the movie component list inside container 
-  const movieCardsContainer = (<div className='result-container'>{movieCards}</div>)
+  const movieCardsContainer = (<div className='result-container' data-aos='fade-up'>{movieCards}</div>)
 
 
 // rendering the search result
@@ -122,7 +122,7 @@ function App() {
                                                           key={movieObj.imdbID} 
                                                           watchList={removeWatchList}/>)
 
-  const watchListContainer = (<div className="result-container">{moviesInWatchList}</div>)
+  const watchListContainer = (<div className="result-container" data-aos='fade-up'>{moviesInWatchList}</div>)
 
 
   const watchListRender = watchList.length > 0 ? watchListContainer : noWatchListMessage

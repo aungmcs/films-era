@@ -10,7 +10,7 @@ const Movie = (props) => {
     let poster = props.movie.Poster === "N/A" ? movieImg : props.movie.Poster
     return (
         // <a className='movie-link' href={`https://www.imdb.com/title/${props.movie.imdbID}/`} target='_blank' rel="noopener noreferrer">
-            <div className='movie-card' data-aos='fade-up'>
+            <div className='movie-card'>
                 <img src={poster} alt={props.Title}/>
                 <div className='movie-detail'>
                     <h2>{props.movie.Title}</h2>
