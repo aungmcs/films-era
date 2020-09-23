@@ -18,6 +18,7 @@ const Search = (props) => {
         e.preventDefault()
         props.onSearch(searchWord)
         resetSearchWord()
+        window.location.href = '#result'
     }
 
 
