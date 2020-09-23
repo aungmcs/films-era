@@ -17,8 +17,8 @@ const Search = (props) => {
     const handleClick = (e) => {
         e.preventDefault()
         props.onSearch(searchWord)
-        resetSearchWord()
         window.location.href = '#result'
+        resetSearchWord()
     }
 
 
