@@ -122,7 +122,7 @@ function App() {
                                                           key={movieObj.imdbID} 
                                                           watchList={removeWatchList}/>)
 
-  const watchListContainer = (<div className="result-container" data-aos='fade-up'>{moviesInWatchList}</div>)
+  const watchListContainer = (<div className="result-container">{moviesInWatchList}</div>)
 
 
   const watchListRender = watchList.length > 0 ? watchListContainer : noWatchListMessage
@@ -133,9 +133,9 @@ function App() {
   return (
     <div className="App">
       <Heading search={searchWord} />
-      <h1 id='result' className='result-heading' data-aos='fade-up'>{resultHeading}</h1>
+      <h1 id='result' className='result-heading'>{resultHeading}</h1>
       {searchResultRender}
-      <h1 id='watchlist' className='result-heading' data-aos='fade-up'>Watch List</h1>
+      <h1 id='watchlist' className='result-heading'>Watch List</h1>
       {watchListRender}
       <Footer />
     </div>

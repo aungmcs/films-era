@@ -80,10 +80,13 @@ footer {
     background-color: gainsboro;
     width: 100%;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     align-items: center;
     justify-content: center;
     p{
         margin-right: 1.3em;
+    }
+    a {
+        color: rgb(71, 71, 71);
     }
 }
