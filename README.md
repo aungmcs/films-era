@@ -4,3 +4,4 @@
 - Utilized [OMDBI API](http://www.omdbapi.com/) <br>
 - Illustrations: [unDraw](https://undraw.co/)
 
+![web preview](./src/img/web-screenshot.png)
