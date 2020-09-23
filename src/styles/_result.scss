@@ -1,6 +1,5 @@
 .result-heading {
     margin-top: 2.6em;
-    margin-bottom: 1em;
     font-family: $header-font;
     font-weight: lighter;
     font-size: 4vw;
@@ -73,5 +72,18 @@
     }
     @media screen and (max-width: $xm){
         font-size: 0.8rem;
+    }
+}
+
+footer {
+    margin-top: 3em;
+    background-color: gainsboro;
+    width: 100%;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    p{
+        margin-right: 1.3em;
     }
 }

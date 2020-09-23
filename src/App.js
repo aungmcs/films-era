@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Movie from './components/Movie.js'
 import MovieWatchList from './components/MovieWatchList.js'
 import Heading from './components/Heading.js'
+import Footer from './components/Footer.js'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import {ReactComponent as NotFoundSvg} from './img/not-found.svg'
 import {ReactComponent as VoidSvg} from './img/void.svg'
 
@@ -27,6 +31,7 @@ function App() {
 //------------------- INITIAL DATA FETCH ---------------------------------
 
   useEffect(() => {
+    AOS.init({duration: 1300})
     setLoadingState(true)
     fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=jungle`) // Object.Search[0].Title/Year/imdbID/Type/Poster
     .then(response => response.json())
@@ -128,10 +133,11 @@ function App() {
   return (
     <div className="App">
       <Heading search={searchWord} />
-      <h1 id='result' className='result-heading'>{resultHeading}</h1>
+      <h1 id='result' className='result-heading' data-aos='fade-up'>{resultHeading}</h1>
       {searchResultRender}
-      <h1 id='watchlist' className='result-heading'>Watch List</h1>
+      <h1 id='watchlist' className='result-heading' data-aos='fade-up'>Watch List</h1>
       {watchListRender}
+      <Footer />
     </div>
   );
 }

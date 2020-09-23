@@ -44,8 +44,8 @@
 
 @media screen and (max-width: 426px) {
   .movie-card {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 14em;
   }
   .movie-card:hover {
     -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
@@ -65,18 +65,13 @@
 
 @media screen and (max-width: 910px) {
   .movie-card img {
-    width: 40%;
-    margin-right: 4em;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .movie-card img {
-    margin-right: 2em;
+    width: 43%;
   }
 }
 
 .movie-card .movie-detail {
+  width: 45%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,13 +79,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1.5em;
 }
 
 .movie-card .movie-detail h2 {
@@ -108,7 +101,7 @@
 
 @media screen and (max-width: 426px) {
   .movie-card .movie-detail h2 {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -158,7 +151,7 @@
 
 @media screen and (max-width: 426px) {
   .movie-card .movie-detail button {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -208,8 +201,8 @@
 
 @media screen and (max-width: 426px) {
   .movie-card {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 14em;
   }
   .movie-card:hover {
     -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
@@ -229,18 +222,13 @@
 
 @media screen and (max-width: 910px) {
   .movie-card img {
-    width: 40%;
-    margin-right: 4em;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .movie-card img {
-    margin-right: 2em;
+    width: 43%;
   }
 }
 
 .movie-card .movie-detail {
+  width: 45%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,13 +236,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1.5em;
 }
 
 .movie-card .movie-detail h2 {
@@ -272,7 +258,7 @@
 
 @media screen and (max-width: 426px) {
   .movie-card .movie-detail h2 {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -322,7 +308,7 @@
 
 @media screen and (max-width: 426px) {
   .movie-card .movie-detail button {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -354,18 +340,18 @@
           align-items: center;
 }
 
-.header-container svg {
+.header-container img {
   width: 12vw;
 }
 
 @media screen and (max-width: 910px) {
-  .header-container svg {
+  .header-container img {
     width: 160px;
   }
 }
 
 @media screen and (max-width: 426px) {
-  .header-container svg {
+  .header-container img {
     width: 80px;
   }
 }
@@ -574,7 +560,6 @@
 
 .result-heading {
   margin-top: 2.6em;
-  margin-bottom: 1em;
   font-family: "Bebas Neue", cursive;
   font-weight: lighter;
   font-size: 4vw;
@@ -701,6 +686,26 @@
   .error {
     font-size: 0.8rem;
   }
+}
+
+footer {
+  margin-top: 3em;
+  background-color: gainsboro;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  margin-right: 1.3em;
 }
 
 *,
