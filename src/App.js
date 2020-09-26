@@ -1,38 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer} from 'react';
 import Movie from './components/Movie.js'
 import MovieWatchList from './components/MovieWatchList.js'
 import Heading from './components/Heading.js'
 import Footer from './components/Footer.js'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import * as  re from './Reducer'
 
 import {ReactComponent as NotFoundSvg} from './img/not-found.svg'
 import {ReactComponent as VoidSvg} from './img/void.svg'
-
-
 import './styles/App.css';
 
 function App() {
+
+  const initialState = {
+    movieList: [],
+    searchComplete: false,
+    errorState: false,
+    loadingState: false,
+    watchList: []
+  }
+  
+
+
+  const [state, dispatch] = useReducer(re.reducer, initialState)
+
   const API_KEY = 'b1863673'
   const ERROR_STATEMENT = (<div className='error'>
                               <VoidSvg />
                               <p>MOVIE NOT FOUND. TRY DIFFERENT KEYWORD</p>
                           </div>)
 
-// ----------   STATES   -----------------------------
-
-  const [movieList, setMovieList] = useState([])
-  const [searchComplete, setSearchComplete] = useState(false)
-  const [errorState, setErrorState] = useState(false)
-  const [loadingState, setLoadingState] = useState(false)
-  const [watchList, setWatchList] = useState([])
-
 
 //------------------- INITIAL DATA FETCH ---------------------------------
 
   useEffect(() => {
     AOS.init({duration: 1300})
-    setLoadingState(true)
+    dispatch({
+      type: re.DATA_FETCHING_STARTED
+    })
     fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=jungle`) // Object.Search[0].Title/Year/imdbID/Type/Poster
     .then(response => response.json())
     .then(response => {
@@ -40,9 +46,10 @@ function App() {
       response.Search.forEach(movieObj => {
         temp.push(movieObj)
       })
-      setMovieList(temp)
-      setLoadingState(false)
-      setSearchComplete(false)
+      dispatch({
+        type: re.INITIAL_DATA_FETCHING_COMPLETED,
+        payload: temp
+      })
     })
   }, [])
 
@@ -54,19 +61,19 @@ function App() {
     .then(response => response.json())
     .then(response => {
       if (response.Response === 'False'){
-        setErrorState(true)
-        setLoadingState(false)
-        setSearchComplete(true)
-      
+        dispatch({
+          type: re.ERROR_OCCURED
+        })
       }else{
         let temp = []
         response.Search.forEach(movieObj => {
           temp.push(movieObj)
         })
-        setErrorState(false)
-        setLoadingState(false)
-        setMovieList(temp)
-        setSearchComplete(true)
+
+        dispatch({
+          type: re.SEARCH_SUCCESSFUL,
+          payload: temp
+        })
       }
     })
   }
@@ -76,19 +83,34 @@ function App() {
 
   const addWatchList = (id) => {    
     // the id would be a string : imdbID
-    setWatchList(prvList => prvList.concat(movieList.filter(movie => movie.imdbID === id)))
-    setMovieList(movieList.filter(movie => movie.imdbID !== id)
-    ) 
+    dispatch({
+      type: re.ADD_TO_WATCHLIST,
+      payload: id
+    })
+
+    dispatch({
+      type: re.REMOVE_FROM_MOVIE_LIST,
+      payload: id
+    })
   }
 
 
 // ----------------------- STATE UPDATE FOR REMOVING FROM WATCHLIST ---------------------------
 
   const removeWatchList = (id) => {
-    setMovieList(prvList => prvList.concat(watchList.filter(movie => movie.imdbID === id)))
-    setWatchList(watchList.filter(movie => movie.imdbID !== id))
+    dispatch({
+      type: re.ADD_TO_MOVIE_LIST,
+      payload: id
+    })
+
+    dispatch({
+      type: re.REMOVE_FROM_WATCHLIST,
+      payload: id
+    })
   }
 
+
+  const {movieList, searchComplete, loadingState, errorState, watchList} = state
 
 //------------------- HANDLING THE SEARCH RESULTS  --------------------------------
 
@@ -143,15 +165,6 @@ function App() {
 }
 
 export default App;
-
-// ----------- TESTING DATA --------------------------
-  // const sampleData = {
-  //   Poster: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg",
-  //   Title: "dead poet's society",
-  //   Type: "movie",
-  //   Year: "2008",
-  //   imdbID: "tt0371746"
-  // }
 
 
 
