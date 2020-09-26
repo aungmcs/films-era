@@ -15,8 +15,8 @@
 .movie-card:hover {
   -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .movie-card img {
@@ -106,8 +106,8 @@
 .movie-card:hover {
   -webkit-box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 2px 17px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .movie-card img {
