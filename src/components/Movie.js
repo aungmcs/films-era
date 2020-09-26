@@ -8,19 +8,19 @@ const Movie = (props) => {
     }
 
     let poster = props.movie.Poster === "N/A" ? movieImg : props.movie.Poster
+    let title = props.movie.Title.length > 30 ? `${props.movie.Title.slice(0,25)}...` : props.movie.Title
     return (
-        // <a className='movie-link' href={`https://www.imdb.com/title/${props.movie.imdbID}/`} target='_blank' rel="noopener noreferrer">
             <div className='movie-card'>
                 <img src={poster} alt={props.Title}/>
                 <div className='movie-detail'>
-                    <h2>{props.movie.Title}</h2>
+                    <h2>{title}</h2>
                     <p><strong>Year :</strong> {props.movie.Year}</p>
                     <p><strong>Type :</strong> {props.movie.Type}</p>
                     {/* <p><strong>IMDB ID :</strong> {props.movie.imdbID}</p> */}
                     <a className='movie-link' href={`https://www.imdb.com/title/${props.movie.imdbID}/`} target='_blank' rel="noopener noreferrer">
                         <button>MORE INFO</button>
                     </a>
-                    <button value= {props.movie.imdbID} onClick={addWatchList} className='watchList-btn'>ADD TO WATCH LIST</button>
+                    <button value= {props.movie.imdbID} onClick={addWatchList} className='watchList-btn'>WATCH LIST</button>
                 </div>
             </div>
         

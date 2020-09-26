@@ -8,6 +8,7 @@
 ::before{
     text-align: center;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 html {
@@ -30,4 +31,9 @@ html {
 
 a {
     text-decoration: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,5 +1,7 @@
 .result-heading {
     margin-top: 2.6em;
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-family: $header-font;
     font-weight: lighter;
     font-size: 4vw;
@@ -13,26 +15,21 @@
 
 
 .result-container {
-    width: 100%;
-    // margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
-    grid-gap: 4em;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 2em;
     justify-content: center;
-    @media screen and (max-width: $md){
-        grid-template-columns: 500px;
-    }
-    @media screen and (max-width: $sm){
-        grid-gap: 0.1em;
-        width: 100%;
-        grid-template-columns: 450px;
-        grid-template-rows: repeat(auto-fill, 300px);
+    align-items: center;
+    padding: 0px 50px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    @media screen and (max-width: $lg){
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     @media screen and (max-width: $xm){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 0px 20px;
     }
 }
 

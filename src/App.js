@@ -35,7 +35,6 @@ function App() {
 //------------------- INITIAL DATA FETCH ---------------------------------
 
   useEffect(() => {
-    AOS.init({duration: 1300})
     dispatch({
       type: re.DATA_FETCHING_STARTED
     })
@@ -112,6 +111,7 @@ function App() {
 
   const {movieList, searchComplete, loadingState, errorState, watchList} = state
 
+
 //------------------- HANDLING THE SEARCH RESULTS  --------------------------------
 
   const resultHeading = searchComplete ? 'Searched movie list' : 'Movies you might enjoy'
@@ -122,7 +122,7 @@ function App() {
                                                     watchList={addWatchList} />)
 
 // adding the movie component list inside container 
-  const movieCardsContainer = (<div className='result-container' data-aos='fade-up'>{movieCards}</div>)
+  const movieCardsContainer = (<div className='result-container'>{movieCards}</div>)
 
 
 // rendering the search result

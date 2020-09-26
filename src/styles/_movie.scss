@@ -1,17 +1,19 @@
-$bd-r: 1.4em;
+$bd-r: 1.2em;
 $header-font: 'Bebas Neue', cursive;
+$lg: 1080px;
 $md: 910px;
 $sm: 616px;
 $xm: 426px;
 
 .movie-card {
     display: flex;
-    width: 25em;
-    height: 18em;
+    // width: 25em;
+    // height: 18em;
     border-radius: $bd-r;
     background-color: rgb(255, 255, 255);
     border: 1px solid gray;
-    transform: scale(1);
+    // transform: scale(1);
+    padding-right: 5px;
     transition: transform 0.1s ease-in-out;
     &:hover{
         -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
@@ -19,29 +21,29 @@ $xm: 426px;
         box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
         transform: scale(1.1);
     }
-    @media screen and (max-width: $md){
-        width: 100%;
-        height: 20em;
-    }
-    @media screen and (max-width: $sm){
-        transform: scale(0.7);
-        &:hover {
-            -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            transform: scale(0.8);
-        }
-    }
-    @media screen and (max-width: $xm){
-        width: 400px;
-        height: 14em;
-        &:hover {
-            -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
-            transform: scale(0.8);
-        }
-    }
+    // @media screen and (max-width: $md){
+    //     width: 100%;
+    //     height: 20em;
+    // }
+    // @media screen and (max-width: $sm){
+    //     transform: scale(0.7);
+    //     &:hover {
+    //         -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         -moz-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         transform: scale(0.8);
+    //     }
+    // }
+    // @media screen and (max-width: $xm){
+    //     width: 400px;
+    //     height: 14em;
+    //     &:hover {
+    //         -webkit-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         -moz-box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+    //         transform: scale(0.8);
+    //     }
+    // }
 
     img {
         width: 45%;
@@ -49,9 +51,9 @@ $xm: 426px;
         margin-right: 2em;
         border-top-left-radius: $bd-r;
         border-bottom-left-radius: $bd-r;
-        @media screen and (max-width: $md){
-            width: 43%;
-        }
+        // @media screen and (max-width: $md){
+        //     width: 43%;
+        // }
     }
     
  
@@ -67,28 +69,28 @@ $xm: 426px;
             margin: 0.3em 0 0 0;
             font-family: $header-font;
             font-size: 1.6rem;
-            @media screen and (max-width: $md){
-                font-size: 2.3rem;
-            }
+            // @media screen and (max-width: $md){
+            //     font-size: 2.3rem;
+            // }
             @media screen and (max-width: $xm){
-                font-size: 1.75rem;
+                font-size: 1.45rem;
             }
         }
         p{
             margin: 0;
-            font-size: 1.1rem;
-            @media screen and (max-width: $md){
-                font-size: 1.5rem;
-            }
-            @media screen and (max-width: $xm){
-                font-size: 0.9rem;
-            }
+            font-size: cramp(0.9rem, 3vw, 2rem);
+            // @media screen and (max-width: $md){
+            //     font-size: 1.5rem;
+            // }
+            // @media screen and (max-width: $xm){
+            //     font-size: 0.9rem;
+            // }
         }
         button{
             margin-top: 0.3em;
             margin-bottom: 0.3em;
-            font-size: 0.9rem;
-            padding: 0.5em;
+            font-size: 12px;
+            padding: 0.8em 0.6em 0.8em 0.6em;
             border-radius: 0.7em;
             border: transparent;
             background-color: rgb(61, 61, 61);
@@ -101,11 +103,11 @@ $xm: 426px;
                 color: rgb(61, 61, 61);
                 border: 1px solid rgb(61, 61, 61);
             }
-            @media screen and (max-width: $md){
-                font-size: 1em;
-            }
-            @media screen and (max-width: $xm){
-                font-size: 0.8rem;
+            // @media screen and (max-width: $md){
+            //     font-size: 1em;
+            // }
+            @media screen and (max-width: 380px){
+                padding: 0.4em;
             }
         }
     }
