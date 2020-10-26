@@ -183,6 +183,7 @@
 .landing-page {
   background-image: url("../img/home-bg.svg");
   background-position: left;
+  min-height: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
 }

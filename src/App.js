@@ -3,7 +3,6 @@ import Movie from './components/Movie.js'
 import MovieWatchList from './components/MovieWatchList.js'
 import Heading from './components/Heading.js'
 import Footer from './components/Footer.js'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 import * as  re from './Reducer'
 
