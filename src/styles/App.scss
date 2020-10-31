@@ -1,39 +1,97 @@
-@import "movie";
-@import "heading";
-@import "search";
-@import "result";
-
-*, 
+*,
 ::after,
-::before{
-    text-align: center;
-    text-decoration: none;
-    box-sizing: border-box;
+::before {
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(182, 182, 182);
+  opacity: 1; /* Firefox */
+}
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(182, 182, 182);
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgb(182, 182, 182);
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: rgb(182, 182, 182);
-  }
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(182, 182, 182);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(182, 182, 182);
+}
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: #3a363f;
+}
+
+.bg-main {
+  background-color: #51456c;
+}
+
+.bg-light {
+  background-color: #f8c163;
+}
+
+.text-main {
+  color: #51456c;
+}
+
+.text-light {
+  color: #f8c163;
+}
+
+.border-light {
+  --border-opacity: 1;
+  border-color: #f8c163;
+  border-color: rgba(248, 193, 99, var(--border-opacity));
+}
+
+.heading {
+  background-image: url(../img/heading.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 250px !important;
+  width: 100%;
+  @media screen and (min-width: 850px) {
+    border-bottom-left-radius: 12rem;
+  }
+}
+
+.pagination-style {
+  &:hover {
+    transform: scale(0.8);
+    transition: all 100ms ease-in-out;
+  }
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+// ------ Moive Hover Effect --------------------
+
+.movie-img:hover + .movie-button,
+.movie-button:hover {
+  opacity: 100%;
+}
+
+.movie-img + .movie-button {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.692)
+  );
+  transition: opacity 0.3s ease-in;
 }
