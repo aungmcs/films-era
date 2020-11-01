@@ -2,7 +2,7 @@ import React from "react";
 
 const Pagination = ({ handlePageChange, pageNumber }) => {
   return (
-    <div className="max-w-lg mx-auto mt-5 flex items-center justify-center">
+    <div className="sm:max-w-sm mx-auto mt-5 flex items-center justify-center">
       {/* ---------- FIRE VECTOR DECORATION ----------------- */}
       <div className="text-white bg-main p-2 mr-3 rounded-full">
         <svg
@@ -28,8 +28,8 @@ const Pagination = ({ handlePageChange, pageNumber }) => {
           key={i}
           className={
             pageNumber === i
-              ? "text-gray-300 font-semibold border-2 border-gray-300 py-1 px-3 mr-3 rounded-full"
-              : "text-white font-semibold bg-main py-2 px-4 mr-3 rounded-full pagination-style"
+              ? "text-gray-300 font-semibold border-2 border-gray-300 px-2 sm:py-1 sm:px-3 mr-3 rounded-full"
+              : "text-white font-semibold bg-main px-2 sm:py-1 sm:px-3 mr-3 rounded-full pagination-style"
           }
         >
           {i}

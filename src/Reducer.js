@@ -27,6 +27,8 @@ export const reducer = (state, action) => {
       return {
         ...state,
         movieInfo: action.payload,
+        errorState: false,
+        loadingState: false,
       };
     case CHANGE_PAGE:
       return {

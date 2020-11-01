@@ -30,7 +30,7 @@ const MovieContainer = ({
             handlePageChange={handlePageChange}
             pageNumber={pageNumber}
           />
-          <div className="container mx-auto grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-10">
+          <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-10">
             {movieList.map((movie) => (
               <Movie
                 key={movie.imdbID}

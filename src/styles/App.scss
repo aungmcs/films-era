@@ -82,16 +82,52 @@ body {
 
 // ------ Moive Hover Effect --------------------
 
-.movie-img:hover + .movie-button,
+.movie-box {
+  transform: scaleX(1);
+  transition: all 0.4s;
+  &:hover {
+    transform: scaleX(1.05);
+  }
+}
+
+.movie-box:hover + .movie-button,
 .movie-button:hover {
   opacity: 100%;
 }
 
-.movie-img + .movie-button {
+.movie-box + .movie-button {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.692)
   );
   transition: opacity 0.3s ease-in;
+}
+
+// -------- BACK TO HOME PAGE FROM MOVIE DETAIL ----------
+.backhome {
+  &:hover {
+    span {
+      padding-left: 27%;
+      &::before {
+        opacity: 1;
+        left: 11%;
+      }
+    }
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    padding-left: 23%;
+    transition: all 0.5s;
+    &::before {
+      content: "\00AB";
+      font-size: 2rem;
+      position: absolute;
+      bottom: -35%;
+      left: 19%;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+  }
 }
