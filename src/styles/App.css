@@ -114,8 +114,8 @@ body {
 }
 
 .movie-box:hover {
-  -webkit-transform: scaleX(1.05);
-          transform: scaleX(1.05);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .movie-img:hover + .movie-button,
@@ -124,8 +124,7 @@ body {
 }
 
 .movie-img + .movie-button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.692)));
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.692));
+  background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.692));
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
