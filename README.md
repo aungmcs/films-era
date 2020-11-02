@@ -1,4 +1,4 @@
-## A Movie Searching Website | [FilmsEra](https://films-era.vercel.app)
+## A Movie Searching Website - [FilmsEra](https://films-era.vercel.app)
 
 ![web preview](./src/img/website_demo.gif)
 
