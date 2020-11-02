@@ -17,7 +17,7 @@ const Movie = ({ movie, handleMovieInfo }) => {
 
       <div className="movie-button absolute bottom-0 rounded-xl opacity-0 flex flex-col items-center justify-center h-full w-full">
         <svg
-          className="bg-main text-white rounded-full"
+          className="bg-gray-500 text-gray-200 rounded-full opacity-75"
           width="40"
           height="40"
           xmlns="http://www.w3.org/2000/svg"

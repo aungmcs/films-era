@@ -54,7 +54,7 @@ const Header = ({ handlePageChange, handleSearchWordChange, movieInfo }) => {
                   setSearchTerm(e.target.value);
                 }}
                 value={searchTerm}
-                className="bg-transparent border-2 border-yellow-500 p-2 pl-12 ml-3 rounded-full outline-none text-white w-3/4"
+                className="bg-transparent border-2 border-light p-2 pl-12 ml-3 rounded-full outline-none text-white w-3/4"
                 type="text"
                 placeholder="Search for movies..."
               />
