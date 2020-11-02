@@ -6,6 +6,7 @@
 🔰 International movies can be thoroughly searched and browsed useing keywords.<br>
 🔰 A detailed information of the movies can also be checked.<br>
 🔰 Utilized [OMDBI API](http://www.omdbapi.com/) to retrieve movies information. <br>
+🔰 Fully responsive throughout different devices. <br>
 <br>
 ## Credits
 🔰 The **"Not found"** illustration was used from [unDraw](https://undraw.co/).<br>
